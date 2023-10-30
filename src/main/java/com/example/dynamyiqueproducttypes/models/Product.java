@@ -14,7 +14,7 @@ public class Product {
     private double price ;
     private String description ;
     private String name;
-
+    private String image;
 
     @ElementCollection
     @CollectionTable(name = "product_attributes_values", joinColumns = @JoinColumn(name = "id"))
@@ -30,6 +30,7 @@ public class Product {
     public Product(){
 
     }
+
 
     public Product(Long id, double price, String description, ProductType productType , String name) {
         this.id = id;
@@ -86,5 +87,13 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
